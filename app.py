@@ -11,7 +11,7 @@ def hello_sovian():
 
 @app.route("/api/jobs")
 def list_jobs():
-  return json(JOBS)
+  return jsonify(JOBS)
 
 
 if __name__ == '__main__':
