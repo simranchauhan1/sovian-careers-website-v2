@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_sovian():
+  jobs=load_jobs_from_db()
   return render_template('home.html', jobs=jobs, company_name='Sovian')
 
 

@@ -24,4 +24,5 @@ def load_jobs_from_db():
     result_dicts = []
     for row in result._allrows():
       result_dicts.append(dict(row._mapping))
-      return result_dicts
+      
+   return result_dicts
