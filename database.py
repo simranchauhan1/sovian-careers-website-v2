@@ -9,15 +9,6 @@ engine = create_engine(db_connection_string,
                          "ssl_ca": "/etc/ssc/cert.pem"
                        }})
 
-with engine.connect() as conn:
-  result = conn.execute(text("select * from jobs;"))
-
-  result_dicts=[]
-  for row in result._allrows():
-   result_dicts.append(row._mapping)
-  
-  print(len(result_dicts))
-
 def load_jobs_from_db():
   with engine.connect() as conn:
     result = conn.execute(text("select * from jobs"))
@@ -25,4 +16,5 @@ def load_jobs_from_db():
     for row in result._allrows():
       result_dicts.append(dict(row._mapping))
       
-    return result_dicts
+  return result_dicts
+ 
