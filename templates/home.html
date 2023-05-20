@@ -11,23 +11,34 @@
         height: 320px;
         width: 100%;
         object-fit: cover;
+        margin-bottom:16px;
       }
     </style>
 
   </head>
   <body>
+
+    {% include 'nav.html' %}
+ <img id="banner" class="img-fluid" src ="https://sovian-carrers-websitw--simranchauhan2.repl.co/static/banner.jpg " height= "320px">
+    
     
    <div class="container">
-    <h1 class="text-center" mt-2 mb-4>
+    <h1 class="text-center mt-2 mb-4">
       {{company_name}} Careers
     </h1>
-    <img id="banner" class="img-fluid" src ="https://sovian-carrers-websitw--simranchauhan2.repl.co/static/banner.jpg " height= "320px">
     
-    <h2 class="text-center">About Sovian</h2>
+     <div class="row">
+       <div class="col-md-6" style="margin-bottom:16px;">
     <p class="lead">Lorem ipsum dolor sit amet. Qui omnis libero non voluptas laudantium est ducimus rerum et aperiam facilis. Aut aliquid minus ex rerum dolorem aut doloribus nostrum et quia magnam ab mollitia omnis qui voluptas inventore! Qui nisi dolorem in possimus internos qui sunt voluptatem est natus corrupti sit similique autem sed dolores voluptatem quo commodi adipisci! Ut sint officiis qui iure harum et similique incidunt. Qui ipsum ipsa qui dolores eligendi in veritatis recusandae id nostrum tempore hic recusandae ipsam? Non corrupti illum in inventore quaerat et dolores blanditiis. Non quia unde in nesciunt natus non placeat aliquid quo nostrum culpa sit omnis beatae vel odit quidem. Et sint ipsa qui galisum libero et architecto voluptatibus eum voluptates soluta. 
  </p>
+       </div>
+     <div class="d-none d-md-block col-6">
+       <img src="/static/people.jpg" style="height:320px; border- 
+        radius:4px;">
+   </div>
+     </div>
     
-    <h2 class="text-center">Open Positions</h2>
+    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
     <p > 
       <div>
        {% for jobs in jobs %}
@@ -39,7 +50,7 @@
      <button class="btn btn-primary btn-lg">Contact Us</button>
     <p class="mt-4">copyright Sovian 2023</p>
    </div>
-     
+     {% include 'footer.html' %}
    </div>
   </body>
 </html>,

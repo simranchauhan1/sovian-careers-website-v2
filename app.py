@@ -34,6 +34,7 @@ JOBS = [
 def hello_world():
   return render_template('home.html', jobs=JOBS, company_name='Sovian')
 
+
 @app.route("/api/jobs")
 def list_jobs():
   return json(JOBS)
