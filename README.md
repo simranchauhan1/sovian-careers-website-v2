@@ -1,2 +1,2 @@
 # Sovian-carrers-websitw
-A carrers website for Sovian
+A Careers website for Sovian
