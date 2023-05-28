@@ -15,20 +15,20 @@
     {% include 'nav.html'%}
     
     <h3>{{job.title}}</h3>
-    <p class="lead">{{job,location}}</p>
+    <p class="lead">{{job.location}}</p>
   
     <h4>Responsibilities</h4>
-    <ul>{% for line in job.responsibility.split("/n")%}
+    <ul>{% for line in job.responsibilities.split("\n")%}
       <li>{{line}}</li>
       {% endfor %}
     </ul>
     
     <h4>Requirements</h4>
-     <ul>{% for line in job.requirements.split("/n")%}
+     <ul>{% for line in job.requirements.split("\n")%}
       <li>{{line}}</li>
       {% endfor %}
     </ul>
-    <p>{{job.requirements}}</p>
+    
     <h4>Salary</h4>
     <p>{{job.currency}}{{job.salary}}</p>
     {% include 'application_forms.html' %}
