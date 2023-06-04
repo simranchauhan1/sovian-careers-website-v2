@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovian Careers</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+</head>
+<body>
+
+    <h1 class="heading">Sovian Careers </h1>
+
+    <div class="para"><p>Fill the details below:</p></div>
+
+    <div class="job-form">
+    <form action="/recruiter/add_job" method="post">
+        <div class="block">
+        <label for="job_title">Job Title:</label>
+        <input type="text" id="job_title" name="job_title"><br>
+        </div>
+
+        <div class="block">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location"><br>
+        </div>
+
+        <div class="block">
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary"><br>
+        </div>
+
+        <div class="block">
+        <label for="currency">Currency:</label>
+        <input type="text" id="currency" name="currency"><br>
+        </div>
+
+        <div class="block">
+        <label for="responsibilities">Responsibilities:</label>
+        <textarea rows="4" cols="40" id="responsibilities" name="responsibilities"></textarea><br>
+        </div>
+
+        <div class="block">
+        <label for="requirements">Requirements:</label>
+        <textarea rows="4" cols="40" id="requirements" name="requirements"></textarea><br>
+        </div>
+
+        <input type="submit" value="Submit">
+      </form>
+      </div>
+
+</body>
+</html>

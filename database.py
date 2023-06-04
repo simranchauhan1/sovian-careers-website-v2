@@ -41,3 +41,14 @@ def add_application_to_db(job_id, data):
     )
     conn.execute(query)
     conn.commit()
+
+def add_job_to_db(data):
+  with engine.connect() as conn:
+    query=f"""  INSERT INTO jobs (title, location, salary, currency, responsibilities, requirements) VALUES ("{data['job_title']}", "{data['location']}", {data['salary']}, "{data['currency']}","{data['responsibilities']}","{data['requirements']}");"""
+    conn.execute(text(query))
+    conn.commit()
+
+
+
+
+
