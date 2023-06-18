@@ -48,7 +48,12 @@ def add_job_to_db(data):
     conn.execute(text(query))
     conn.commit()
 
+def see_applicants():
+  with engine.connect() as conn:
+    result = conn.execute(text("select * from applicaTions"))
+    result_dicts = []
+    for row in result._allrows():
+      result_dicts.append(dict(row._mapping))
 
-
-
+    return result_dicts   
 

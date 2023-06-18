@@ -9,9 +9,18 @@
     <h1 class="text-center mt-2 mb-4">
       Sovian Careers
     </h1>
+    <div>
+    {% for row in application %}
+    <p>Job Id: {{ row['job_id'] }}</p>
+    <p>Full Name: {{ row['full_name'] }}</p>
+    <p>Email: {{ row['email'] }}</p>
+    <p>Linkedin: {{ row['linkedin_url'] }}</p>
+    <p>Education: {{ row['education'] }}</p>
+    <p>Work Experience: {{ row['work_experience'] }}</p>
+    <p>Resume: {{ row['resume_url'] }}</p>
+    <hr>
+    {% endfor %}
 </div>
-</head>
-<body>
      
 </body>
 </html>
